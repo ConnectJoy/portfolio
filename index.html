@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Joy Batubo</title>
+</head>
+<body>
+    <header>
+            <nav>
+                <a href="#projects">PROJECTS</a>
+                <a href="#footer">CONTACT</a>
+            </nav>
+            <div class="yellow center" id="welcome">
+                <div class="welcome-text">
+                    <h2 class="typing-text">Hello There!!!</h2>
+                    <p>let's see what Joy has been up to</p> 
+                </div>
+                <div>
+                    <img src="Images/giphy.gif" alt="waving cartoon">
+                </div>
+            </div>
+    </header>
+    <main>
+<!-- start projects section -->
+
+        <section class="home-featured-projects">
+            <div class="hfp-intro">
+              <h2 id="projects">Projects</h2>
+              <p>Welcome to my portfolio! Peruse these highlights from my portfolio, a mere glimpse into the diverse projects I've had the privilege to work on. While these three endeavors showcase my skills, creativity, and problem-solving, they're just a part of my journey. Some of my most impactful work remains behind the scenes, out of respect for clients' privacy. Rest assured, there's much more to explore, and I'm excited to share my journey with you. </p>
+              <section id="skills">
+                <ul>
+                    <li>WordPress</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Jquery</li>
+                    <li>PHP</li>
+                    <li>MySQL</li>
+                    <li>Git</li>
+                </ul>
+            </section>
+            </div>
+            <div id="hfp-projects">
+              <div class="hfp-project">
+                <div class="hfp-description">
+                  <p>June 2023</p>
+                  <h2>Interior Design Website</h2>
+                  <p>Currently working on this project for AV Interiors. Some features are Gallery, Live Chat and Booking Calendar. Technologies used: HTML, CSS, JavaScript, CRM. </p>
+                  <button class="black-button">See More</button>
+                </div>
+                <div class="hfp-image">
+                  <img src="Images/home-avinteriors.png" alt="project image name">
+                </div>
+              </div>
+              <div class="hfp-project spare">
+                <div class="hfp-image">
+                  <img src="Images/about-sparepark.png" alt="project image name">
+                </div>
+                <div class="hfp-description">
+                  <p>January 2023</p>
+                  <h2>Spare Parking</h2>
+                  <p>Spare Park offers users a platform to find, list and book parking spaces. Some Features are Listings, Login, and Services. Technologies used: PHP, MySQL, Jquery, JavaScript, CSS and HTML. </p>
+                  <button class="black-button">See More</button>
+                </div>
+              </div>
+              <div class="hfp-project">
+                <div class="hfp-description">
+                  <p>2022</p>
+                  <h2>Above Average Group</h2>
+                  <p>Private Company website for an organization. Technologies: WordPress. The website is currently being upgraded.</p>
+                 <a  class="black-button" href="https://aboveaverageglobal.com/">See More</a>
+                </div>
+                <div class="hfp-image">
+                  <img src="Images/home-aboveaverage.png" alt="project image name">
+                </div>
+              </div>
+            </div>
+          </section>
+ <!-- end projects section -->
+
+    </main>
+    <footer id="footer">
+        <p>Email: joyinomabatubo@gmail.com</p>
+        <p>Website created and Designed by Joy</p>
+    </footer>
+
+<!-- start javascript -->
+
+<script>
+    const textElement = document.querySelector('.typing-text');
+    const text = textElement.innerHTML;
+    textElement.innerHTML = '';
+    
+    let charIndex = 0;
+    function typeText() {
+      if (charIndex < text.length) {
+        textElement.innerHTML += text.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeText, 100);
+      }
+      else {
+        setTimeout(eraseText, 6000); // Delay before erasing
+      }
+    }
+
+    function eraseText() {
+      if (charIndex >= 0) {
+        textElement.innerHTML = text.substring(0, charIndex);
+        charIndex--;
+        setTimeout(eraseText, 50);
+      } else {
+        charIndex = 0;
+        setTimeout(typeText, 1000); // Delay before typing again
+      }
+    }
+
+    typeText();
+  </script>
+
+<!-- end javascript -->
+</body>
+</html>
